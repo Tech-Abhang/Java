@@ -96,27 +96,77 @@
 // }
 
 //prime prime number in range
+// import java.util.*;
+// public class p5{
+
+//     public static void primeRange(int n){  //parameters or formal parameters
+//         for(int i =0 ; i<=n;i++){
+//             boolean isPrime = true;
+//             for(int j=2;j<=Math.sqrt(i);j++){
+//                 if (i%j==0){
+//                     isPrime = false;
+//                 }
+//             }
+//             if (isPrime == true){
+//                 System.out.println(i);
+//             }
+//         }
+//     }
+
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         int n = sc.nextInt();
+//         primeRange(n);
+//         sc.close();
+//     }
+// }
+
+//binary to decimal
+// import java.util.*;
+// public class p5{
+
+//     public static void btd(int a){
+//         int pow = 0;
+//         int decimal = 0;
+//         while(a>0){
+//             int lastDigit = a%10;
+//             decimal = decimal + (lastDigit * (int)Math.pow(2,pow));
+//             pow ++;
+//             a = a/10;
+//         }
+//         System.out.print(decimal);
+        
+//     }
+
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         int a = sc.nextInt();
+//         btd(a);
+//         sc.close();
+//     }
+// }
+
+// decimal to binary
 import java.util.*;
 public class p5{
 
-    public static void primeRange(int n){  //parameters or formal parameters
-        for(int i =0 ; i<=n;i++){
-            boolean isPrime = true;
-            for(int j=2;j<=Math.sqrt(i);j++){
-                if (i%j==0){
-                    isPrime = false;
-                }
-            }
-            if (isPrime == true){
-                System.out.println(i);
-            }
+    public static void dtb(int a){
+        int pow = 0;
+        int binary = 0;
+        while(a>0){
+            int rem = a%2;
+            binary = binary + (rem * (int) Math.pow(10,pow));
+            pow ++;
+            a = a/2;
         }
+        System.out.print(binary);
+        
     }
 
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        primeRange(n);
+        int a = sc.nextInt();
+        dtb(a);
         sc.close();
     }
 }
