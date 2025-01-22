@@ -1,4 +1,5 @@
 //functions
+
 // import java.util.*;
 // public class p5{
 
@@ -147,26 +148,123 @@
 // }
 
 // decimal to binary
+// import java.util.*;
+// public class p5{
+
+//     public static void dtb(int a){
+//         int pow = 0;
+//         int binary = 0;
+//         while(a>0){
+//             int rem = a%2;
+//             binary = binary + (rem * (int) Math.pow(10,pow));
+//             pow ++;
+//             a = a/2;
+//         }
+//         System.out.print(binary);
+        
+//     }
+
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         int a = sc.nextInt();
+//         dtb(a);
+//         sc.close();
+//     }
+// }
+
+//avg of 3 numbers
+
+
+// import java.util.*;
+// public class p5{
+//     public static void avg(int a,int b,int c){
+//         int avg = (a+b+c)/3;
+//         System.out.println(avg);
+//     }
+
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         int a = sc.nextInt();
+//         int b = sc.nextInt();
+//         int c = sc.nextInt();
+//         avg(a,b,c);
+//         sc.close();
+//     }
+// }
+
+
+//check even or odd
+// import java.util.*;
+// public class p5{
+//     public static boolean isEven(int a){
+//         if(a%2==0){
+//             return true;
+//         }else{
+//             return false;
+//         }
+//     }
+
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         int a = sc.nextInt();
+//         if(isEven(a)){
+//             System.out.println("its even");
+//         }else{
+//             System.out.println("its odd");
+//         }
+//         sc.close();
+//     }
+// }
+
+
+//palindrome number
+// import java.util.*;
+// public class p5{
+//     public static boolean palindrome(int a){
+//         int reverse = 0;
+//         while(a !=0){
+//             int remainder = a % 10;
+//             reverse = reverse * 10 + remainder ; 
+//             a = a/10;
+//         }
+//         if(a == reverse){
+//             return true;
+//         }else{
+//             return false;
+//         }
+//     }
+
+//     public static void main(String args[]){
+//         Scanner sc = new Scanner(System.in);
+//         int a = sc.nextInt();
+//         palindrome(a);
+//         if(palindrome(a)){
+//             System.out.println("its palindrome");
+//         }else{
+//             System.out.println("its palindrome");
+//         }
+//         sc.close();
+//     }
+// }
+
+//sum of digits of integer
 import java.util.*;
 public class p5{
-
-    public static void dtb(int a){
-        int pow = 0;
-        int binary = 0;
-        while(a>0){
-            int rem = a%2;
-            binary = binary + (rem * (int) Math.pow(10,pow));
-            pow ++;
-            a = a/2;
+    public static int sumofdigits(int num){
+        int sum = 0;
+        int lastDigit = 0;
+        while(num>0){
+            lastDigit = num % 10;
+            sum = sum + lastDigit;
+            num = num / 10;
         }
-        System.out.print(binary);
-        
+        return sum ; 
     }
-
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        dtb(a);
-        sc.close();
+        int n = sc.nextInt();
+        int sumod = sumofdigits(n);
+        System.out.println(sumod);
+
     }
 }

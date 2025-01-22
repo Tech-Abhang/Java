@@ -1,3 +1,5 @@
+//patterns
+
 // //half pyramid
 // import java.util.*;
 // public class p4{
