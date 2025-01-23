@@ -7,6 +7,7 @@ public class binary {
         System.out.println("index of key is " + index);
     }
 
+    
     public static int bsearch(int numbers[],int key){
         int start = 0 , end = numbers.length - 1;
 

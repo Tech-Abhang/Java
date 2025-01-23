@@ -265,6 +265,6 @@ public class p5{
         int n = sc.nextInt();
         int sumod = sumofdigits(n);
         System.out.println(sumod);
-
+        sc.close();
     }
 }
