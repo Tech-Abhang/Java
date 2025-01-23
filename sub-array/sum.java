@@ -1,4 +1,4 @@
-//brute force
+//brute force O(n3)
 
 public class sum {
     public static void main(String args[]){
