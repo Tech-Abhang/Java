@@ -10,6 +10,7 @@ public class selection_sort {
                     minPos = j;
                 }
             }
+            //swaping min postion element to i(sorted part) and i to min postion 
             int temp = arr[minPos];
             arr[minPos] = arr[i];
             arr[i] = temp ; 
