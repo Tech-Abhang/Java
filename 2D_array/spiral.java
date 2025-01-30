@@ -5,7 +5,7 @@ public class spiral {
         int endRow = matrix.length-1;
         int endCol = matrix[0].length-1;
 
-        //check for both row and col to nxm and mxn matrices print the min number of time 
+        //check for both row and col to nxm and mxn matrices print the min(btw row and col) times 
         //<= >= for the middle element
         while(startRow <= endRow && startCol <= endCol){
 
