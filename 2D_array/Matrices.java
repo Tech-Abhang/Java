@@ -9,6 +9,7 @@ public class Matrices {
                 matrix[i][j] = sc.nextInt();
             }
         }
+        sc.close();
 
         //output
         for(int i=0 ; i<n ; i++){
