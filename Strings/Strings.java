@@ -69,6 +69,6 @@ public class Strings {
                 largest = arr[i];
             }
         }
-        System.out.print(largest); 
+        System.out.println(largest);
     }
 }
