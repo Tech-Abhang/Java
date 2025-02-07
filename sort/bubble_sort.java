@@ -1,8 +1,6 @@
 package sort;
 
 public class bubble_sort {
-
-
     public static void main(String args[]){
         int arr[] = {5,4,1,3,2};
         for (int turn=0;turn<arr.length-1;turn++){

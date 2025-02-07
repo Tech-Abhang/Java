@@ -41,5 +41,6 @@ public class p7 {
             int bitnum = 1;
             int i = sc.nextInt();
             System.out.println(num | bitnum<<i);
+            sc.close();
         }
 }
