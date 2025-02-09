@@ -34,7 +34,20 @@ public class practice_re {
         return n + sumofn(n-1);
     }
 
+    //fibonacci series
+    public static int fibo(int n){
+        //base case
+        if(n == 0){
+            return 0;
+        }
+        if(n == 1){
+            return 1;
+        }
+        return fibo(n-1) + fibo(n-2) ; 
+    }
+
     public static void main(String args[]){
-        int i = 10 ;
+        int i = 25 ;
+        System.out.println(fibo(i));
     }
 }
