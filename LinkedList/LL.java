@@ -1,6 +1,6 @@
 package LinkedList;
 
-class insersion{
+class LL{
     Node head;
     
     class Node{
@@ -42,6 +42,35 @@ class insersion{
         currNode.next = newNode;
     }
 
+    public void startDelete(){
+        if(head == null){
+            System.out.print("list is empty");
+            return;
+        }
+        head = head.next ; 
+    }
+
+    public void lastDelete(){
+        if(head == null){
+            System.out.print("list is empty");
+            return;
+        }
+
+        if(head.next == null){
+            head = null;
+            return;
+        }
+
+        Node lastNode = head.next;
+        Node secondLastNode = head;
+
+        while(lastNode.next != null){
+            lastNode = lastNode.next;
+            secondLastNode = secondLastNode.next;
+        }
+        secondLastNode.next = null;
+    }
+
     //print list
     public void printList() {
         if(head == null){
@@ -54,13 +83,15 @@ class insersion{
             currNode = currNode.next;
         }
 
-        System.out.print("NULL");
+        System.out.println("NULL");
     }
 
     public static void main(String[] args) {
-        insersion list = new insersion();
-        list.addFirst("a");
-        list.addFirst("is");
+        LL list = new LL();
+        list.addFirst("hi");
+        list.addFirst("my");
+        list.printList();
+        list.lastDelete();
         list.printList();
     }
 }
