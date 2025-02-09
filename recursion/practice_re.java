@@ -46,6 +46,51 @@ public class practice_re {
         return fibo(n-1) + fibo(n-2) ; 
     }
 
+    //sorted array or not
+    public static boolean isSorted(int arr[] , int i) {
+        if (i == arr.length-1){
+            return true ; 
+        }
+
+        if(arr[i] > arr[i+1]){
+            return false ; 
+        }
+        return isSorted(arr , i+1);
+    }
+
+    //first occurence 
+    public static int foccur(int arr[] , int target , int i){
+        if(i == arr.length){
+            return -1 ; 
+        }
+        if(arr[i] == target){
+            return i ; 
+        }
+        return foccur(arr, target, i+1);
+    }
+
+    //last occurence
+    //1) look forward
+    //2) self
+
+    public static int loccur(int arr[] , int target , int i) {
+        if(i == arr.length){
+            return -1;
+        }
+
+        int isFound = loccur(arr ,target , i+1);
+        if(isFound != -1 && arr[i] == target){
+            return isFound ; 
+        }
+
+        //self
+        if(arr[i] == target){
+            return i;
+        }
+        return isFound ; 
+    }
+
+
     public static void main(String args[]){
         int i = 25 ;
         System.out.println(fibo(i));
