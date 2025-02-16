@@ -1,3 +1,4 @@
+//single linked list
 package LinkedList;
 
 class LL{
@@ -42,6 +43,7 @@ class LL{
         currNode.next = newNode;
     }
 
+    //delete start
     public void startDelete(){
         if(head == null){
             System.out.print("list is empty");
@@ -50,6 +52,7 @@ class LL{
         head = head.next ; 
     }
 
+    //delete end
     public void lastDelete(){
         if(head == null){
             System.out.print("list is empty");
