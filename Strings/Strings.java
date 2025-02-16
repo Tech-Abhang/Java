@@ -1,4 +1,4 @@
-//palindrome number
+//palindrome numbers
 // package Strings;
 
 // public class Strings {
