@@ -43,5 +43,6 @@ This repository contains various Java programs and concepts organized into diffe
   git clone https://github.com/Tech-Abhang/Java.git
 
 ## To compile and run 
-javac filename.java
-java filename
+
+- javac filename.java
+- java filename
