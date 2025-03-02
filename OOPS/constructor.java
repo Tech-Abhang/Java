@@ -6,8 +6,6 @@ public class constructor {
         s1.name = "Abhang";
         s1.roll = 54;
         
-        //copy
-        Student s2 = new Student(s1);
     }
 
 }
