@@ -1,19 +1,21 @@
 package Queue;
 
-public class QueueB {
+public class circularQ {
     static class Queue{
         static int size ;
         static int rear ; 
         static int arr[] ;
+        static int front;
 
         Queue(int n){
             arr = new int[n] ;
             size = n ; 
-            rear = -1 ; 
+            rear = -1 ;
+            front = -1; 
         }
 
         public static boolean isEmpty(){
-            return rear == -1 ; 
+            return rear == -1 && front == -1 ; 
         }
 
         //add
