@@ -35,7 +35,7 @@ public class StackEx {
             return top_v ;  
         }
 
-        //peek
+        //peek check top element
         public int peek(){
             return list.get(list.size() -1) ;
         }
