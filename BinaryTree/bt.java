@@ -20,22 +20,56 @@ public class bt {
                     if(nodes[idx] == -1){
                         return null ;
                     }
-                    //root
                     Node newNode = new Node(nodes[idx]);
-                    //left
                     newNode.left = buildTree(nodes);
-                    //right
                     newNode.right = buildTree(nodes);
         
                     return newNode ;
                 }
-            }
         
+        //preorder
+        public void preorder(Node root){
+            if(root == null){
+                return ;
+            }
+            System.out.print(root.data + " ");
+            preorder(root.left);
+            preorder(root.right);
+        }
+
+        //inorder
+        public void inorder(Node root){
+            if(root==null){
+                return ;
+            }
+            inorder(root.left);
+            System.out.println(root.data);
+            inorder(root.right);
+        }
+
+        //postorder
+        public void postorder(Node root){
+            if(root==null){
+                return ;
+            }
+            postorder(root.left);
+            postorder(root.right);
+            System.out.println(root.data);
+    }
+}
             public static void main(String[] args) {
                 int nodes[] = {1,2,3,-1,-1,5,-1,3,-1,6};
                 BinaryTree bt = new BinaryTree();
                 Node root = bt.buildTree(nodes);
                 System.out.println(root.data);
+
+                bt.preorder(root);
+                System.out.println();
+
+                bt.inorder(root);
+                System.out.println();
+
+                bt.postorder(root);
 
     }
 }
